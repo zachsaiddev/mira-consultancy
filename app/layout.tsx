@@ -16,9 +16,9 @@ const manrope = Manrope({
 })
 
 export const metadata: Metadata = {
-  title: 'Mira Consultancy',
+  title: 'Mira Consultancy — Custom Software for Growing Businesses',
   description:
-    'Technology consultancy specialising in custom applications, AI agents, and workflow automation.',
+    'I build custom internal applications, AI agents, and workflow automation for startups and scale-ups. Based in London, working globally.',
 }
 
 export default function RootLayout({
