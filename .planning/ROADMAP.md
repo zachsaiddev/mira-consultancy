@@ -30,11 +30,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Typography scales correctly from mobile (320px) to desktop with no layout breaks
   4. Fonts load with no flash of unstyled text (FOUT)
   5. Content data structure exists in typed TypeScript objects (services, tech stack, process steps)
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 01-01: TBD
-- [ ] 01-02: TBD
+- [ ] 01-01-PLAN.md — Project scaffolding, static export, design system (colors, fonts, typography, spacing)
+- [ ] 01-02-PLAN.md — Content schemas (Zod), data files, single-page layout wiring
 
 ### Phase 2: UI Primitives & Animation
 **Goal**: Build reusable UI components and scroll animation system validated for performance
