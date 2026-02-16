@@ -1,12 +1,13 @@
 import { services } from '@/lib/data/services'
 import { techStack } from '@/lib/data/tech-stack'
 import { processSteps } from '@/lib/data/process'
+import { AnimatedSection, Button } from '@/components/ui'
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       {/* Hero */}
-      <section className="section-padding">
+      <AnimatedSection stagger className="section-padding">
         <div className="prose-width">
           <p className="section-label mb-8">Mira Consultancy</p>
           <h1 className="mb-6">Technology that moves your business forward.</h1>
@@ -15,10 +16,10 @@ export default function Home() {
             with precision for businesses that need to move fast.
           </p>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Services */}
-      <section className="section-padding">
+      <AnimatedSection stagger className="section-padding">
         <div className="prose-width">
           <p className="section-label mb-4">What I Do</p>
           <h2 className="mb-12">Services</h2>
@@ -31,10 +32,10 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Process */}
-      <section className="section-padding">
+      <AnimatedSection stagger className="section-padding">
         <div className="prose-width">
           <p className="section-label mb-4">How I Work</p>
           <h2 className="mb-12">Process</h2>
@@ -50,10 +51,10 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Tech Stack */}
-      <section className="section-padding">
+      <AnimatedSection stagger className="section-padding">
         <div className="prose-width">
           <p className="section-label mb-4">Tech Stack</p>
           <h2 className="mb-12">Tools I Use</h2>
@@ -73,10 +74,10 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Contact */}
-      <section className="section-padding">
+      <AnimatedSection stagger className="section-padding">
         <div className="prose-width">
           <p className="section-label mb-4">Get in Touch</p>
           <h2 className="mb-6">Let&apos;s talk.</h2>
@@ -84,14 +85,16 @@ export default function Home() {
             Ready to discuss your project? Book a discovery call or drop me an
             email.
           </p>
-          <a
-            href="https://calendly.com/placeholder"
-            className="inline-block text-accent underline underline-offset-4"
-          >
-            Book a call →
-          </a>
+          <div className="flex flex-col gap-4">
+            <Button href="https://calendly.com/placeholder" external>
+              Book a call
+            </Button>
+            <Button href="mailto:hello@mira.co" variant="secondary">
+              hello@mira.co
+            </Button>
+          </div>
         </div>
-      </section>
+      </AnimatedSection>
     </main>
   )
 }
