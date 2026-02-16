@@ -57,13 +57,11 @@ export function AnimatedSection({
         return cloneElement(element, {
           style: {
             ...(typeof element.props.style === 'object' ? element.props.style : {}),
-            '--stagger-delay': `${index * 150}ms`,
+            opacity: inView ? 1 : 0,
+            transition: `opacity var(--animate-duration-fade) var(--animate-ease-out)`,
+            transitionDelay: `${index * 150}ms`,
           } as React.CSSProperties,
-          className: cn(
-            element.props.className,
-            'stagger-child',
-            inView && 'is-visible',
-          ),
+          className: element.props.className,
         });
       })}
     </Element>
