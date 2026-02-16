@@ -98,13 +98,37 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| (Populated by roadmap) | | |
+| LAYOUT-01 | Phase 1 | Pending |
+| LAYOUT-02 | Phase 3 | Pending |
+| LAYOUT-03 | Phase 3 | Pending |
+| HERO-01 | Phase 3 | Pending |
+| HERO-02 | Phase 3 | Pending |
+| HERO-03 | Phase 3 | Pending |
+| INTRO-01 | Phase 3 | Pending |
+| SERV-01 | Phase 3 | Pending |
+| PROC-01 | Phase 3 | Pending |
+| TECH-01 | Phase 3 | Pending |
+| ABOUT-01 | Phase 3 | Pending |
+| CTA-01 | Phase 3 | Pending |
+| CTA-02 | Phase 3 | Pending |
+| CTA-03 | Phase 3 | Pending |
+| DESGN-01 | Phase 1 | Pending |
+| DESGN-02 | Phase 1 | Pending |
+| DESGN-03 | Phase 1 | Pending |
+| DESGN-04 | Phase 1 | Pending |
+| ANIM-01 | Phase 2 | Pending |
+| ANIM-02 | Phase 2 | Pending |
+| ANIM-03 | Phase 2 | Pending |
+| PERF-01 | Phase 1 | Pending |
+| PERF-02 | Phase 1 | Pending |
+| PERF-03 | Phase 4 | Pending |
+| EXT-01 | Phase 1 | Pending |
 
 **Coverage:**
-- v1 requirements: 20 total
-- Mapped to phases: 0
-- Unmapped: 20 ⚠️
+- v1 requirements: 25 total
+- Mapped to phases: 25
+- Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-02-16*
-*Last updated: 2026-02-16 after initial definition*
+*Last updated: 2026-02-16 after roadmap creation*
