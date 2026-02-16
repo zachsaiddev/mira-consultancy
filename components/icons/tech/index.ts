@@ -1,0 +1,6 @@
+export { TypeScriptIcon } from './TypeScript'
+export { ReactIcon } from './React'
+export { SupabaseIcon } from './Supabase'
+export { PostgreSQLIcon } from './PostgreSQL'
+export { N8NIcon } from './N8N'
+export { NodeJSIcon } from './NodeJS'
