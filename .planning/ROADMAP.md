@@ -62,12 +62,12 @@ Plans:
   4. Footer shows copyright, London location, and social links (LinkedIn, GitHub, Email)
   5. All sections are fully responsive from 320px mobile to desktop
   6. All CTA buttons link to Calendly placeholder URL
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 03-01: TBD
-- [ ] 03-02: TBD
-- [ ] 03-03: TBD
+- [ ] 03-01-PLAN.md -- Hero, Intro, Services, Process, Contact sections + barrel export
+- [ ] 03-02-PLAN.md -- Icon components (social + tech) + TechStack, About, Footer sections
+- [ ] 03-03-PLAN.md -- Page assembly with dividers, SEO metadata, and responsive verification
 
 ### Phase 4: Polish & Performance
 **Goal**: Optimize for production launch with performance and accessibility validation
