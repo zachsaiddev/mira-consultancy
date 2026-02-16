@@ -46,11 +46,10 @@ Plans:
   3. All animations respect `prefers-reduced-motion` setting
   4. Scroll animations perform smoothly on mobile (tested on real device or 4x CPU throttling)
   5. Interactive elements (buttons, links) have visible hover and focus states
-**Plans**: TBD
+**Plans**: 1 plan
 
 Plans:
-- [ ] 02-01: TBD
-- [ ] 02-02: TBD
+- [ ] 02-01-PLAN.md — Animation system, UI components (AnimatedSection, Button), and visual verification
 
 ### Phase 3: Core Content Sections
 **Goal**: Implement all content sections delivering the complete single-page experience
@@ -107,7 +106,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation & Design System | 0/2 | Not started | - |
-| 2. UI Primitives & Animation | 0/2 | Not started | - |
+| 2. UI Primitives & Animation | 0/1 | Not started | - |
 | 3. Core Content Sections | 0/3 | Not started | - |
 | 4. Polish & Performance | 0/2 | Not started | - |
 | 5. Future Architecture | 0/1 | Not started | - |
