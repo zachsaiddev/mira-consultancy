@@ -1,23 +1,95 @@
+import { services } from '@/lib/data/services'
+import { techStack } from '@/lib/data/tech-stack'
+import { processSteps } from '@/lib/data/process'
+
 export default function Home() {
   return (
     <main className="min-h-screen">
+      {/* Hero */}
       <section className="section-padding">
         <div className="prose-width">
           <p className="section-label mb-8">Mira Consultancy</p>
           <h1 className="mb-6">Technology that moves your business forward.</h1>
           <p className="text-lg text-text-secondary max-w-[38rem]">
-            Custom applications, AI agents, and workflow automation — built with precision for businesses that need to move fast.
+            Custom applications, AI agents, and workflow automation — built
+            with precision for businesses that need to move fast.
           </p>
         </div>
       </section>
 
-      <section className="section-padding-sm">
+      {/* Services */}
+      <section className="section-padding">
         <div className="prose-width">
-          <h2 className="mb-4">Design System Test</h2>
-          <p>Primary text on dark background — this should be clearly readable.</p>
-          <p className="text-text-tertiary text-sm mt-2">
-            Tertiary text — subtle but still accessible.
+          <p className="section-label mb-4">What I Do</p>
+          <h2 className="mb-12">Services</h2>
+          <div className="space-y-10">
+            {services.map((service) => (
+              <div key={service.id}>
+                <h3 className="text-xl mb-2">{service.title}</h3>
+                <p>{service.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process */}
+      <section className="section-padding">
+        <div className="prose-width">
+          <p className="section-label mb-4">How I Work</p>
+          <h2 className="mb-12">Process</h2>
+          <div className="space-y-8">
+            {processSteps.map((step) => (
+              <div key={step.id}>
+                <p className="section-label mb-2">
+                  {String(step.step).padStart(2, '0')}
+                </p>
+                <h3 className="text-xl mb-2">{step.title}</h3>
+                <p>{step.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Tech Stack */}
+      <section className="section-padding">
+        <div className="prose-width">
+          <p className="section-label mb-4">Tech Stack</p>
+          <h2 className="mb-12">Tools I Use</h2>
+          <div className="space-y-6">
+            {(
+              ['frontend', 'backend', 'infrastructure', 'automation'] as const
+            ).map((category) => (
+              <div key={category}>
+                <p className="section-label mb-2">{category}</p>
+                <p className="text-text-primary">
+                  {techStack
+                    .filter((t) => t.category === category)
+                    .map((t) => t.name)
+                    .join(' · ')}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section className="section-padding">
+        <div className="prose-width">
+          <p className="section-label mb-4">Get in Touch</p>
+          <h2 className="mb-6">Let&apos;s talk.</h2>
+          <p className="mb-8">
+            Ready to discuss your project? Book a discovery call or drop me an
+            email.
           </p>
+          <a
+            href="https://calendly.com/placeholder"
+            className="inline-block text-accent underline underline-offset-4"
+          >
+            Book a call →
+          </a>
         </div>
       </section>
     </main>
