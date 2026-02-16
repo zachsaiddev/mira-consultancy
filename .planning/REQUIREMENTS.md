@@ -1,0 +1,110 @@
+# Requirements: Mira Consultancy
+
+**Defined:** 2026-02-16
+**Core Value:** The site must look premium and load fast — a single-page experience that communicates credibility, showcases services clearly, and drives visitors to book a call.
+
+## v1 Requirements
+
+Requirements for initial release. Each maps to roadmap phases.
+
+### Layout
+
+- [ ] **LAYOUT-01**: Site renders as a single-page layout with all sections in sequence
+- [ ] **LAYOUT-02**: Site is fully responsive from 320px (iPhone SE) to desktop
+- [ ] **LAYOUT-03**: Footer displays copyright "© 2026 Mira Consultancy", "London, UK", and LinkedIn/GitHub/Email links
+
+### Hero
+
+- [ ] **HERO-01**: Hero displays headline "I build the tools your business actually needs."
+- [ ] **HERO-02**: Hero displays subline describing Mira's services and value proposition
+- [ ] **HERO-03**: Hero has "Let's talk" CTA button linking to Calendly
+
+### Content Sections
+
+- [ ] **INTRO-01**: Intro section displays positioning narrative about Zach and Mira Consultancy
+- [ ] **SERV-01**: Services section displays 5 service offerings (Custom Internal Apps, AI Agents, Workflow Automation, Database Architecture, IT Operations) with titles and descriptions
+- [ ] **PROC-01**: Process section displays 4-step "How I Work" flow (Talk, Scope, Build, Hand over)
+- [ ] **TECH-01**: Tech stack section displays technologies (TypeScript, React, Supabase, PostgreSQL, n8n, Node.js) as a subtle row
+- [ ] **ABOUT-01**: About section displays personal bio including London base, experience, stack, and music personality detail
+
+### Contact
+
+- [ ] **CTA-01**: Contact section displays "Got a problem that needs solving?" headline and subline
+- [ ] **CTA-02**: Contact section has "Get in touch" CTA button linking to Calendly
+- [ ] **CTA-03**: Contact section shows email fallback link (hello@[domain])
+
+### Design
+
+- [ ] **DESGN-01**: Dark/monochrome color palette throughout the site
+- [ ] **DESGN-02**: Bold, typographically strong design with generous whitespace
+- [ ] **DESGN-03**: All text/background pairs meet WCAG AA contrast ratio (4.5:1 minimum for normal text, 3:1 for large text)
+- [ ] **DESGN-04**: Consistent typography scale that works across mobile (320px) and desktop viewports
+
+### Animation
+
+- [ ] **ANIM-01**: Sections fade in on scroll using Intersection Observer + CSS transitions
+- [ ] **ANIM-02**: Smooth transitions on interactive elements (hover states, focus states)
+- [ ] **ANIM-03**: All non-essential animations disabled when user has `prefers-reduced-motion` set
+
+### Performance
+
+- [ ] **PERF-01**: Site uses static site generation (SSG) — no server runtime required
+- [ ] **PERF-02**: Fonts loaded via `next/font` with no visible flash of unstyled text (FOUT)
+- [ ] **PERF-03**: Lighthouse Performance score >90 on mobile
+
+### Extensibility
+
+- [ ] **EXT-01**: Project file structure supports adding `/blog` and `/case-studies` routes without redesigning existing architecture
+
+## v2 Requirements
+
+Deferred to future release. Tracked but not in current roadmap.
+
+### Content
+
+- **BLOG-01**: Blog section with MDX/markdown posts at `/blog`
+- **CASE-01**: Case studies section with project showcases at `/case-studies`
+
+### Engagement
+
+- **TEST-01**: Testimonials section with client quotes
+- **AVAIL-01**: Availability indicator showing current booking status
+- **NEWS-01**: Email newsletter signup
+
+### Analytics
+
+- **ANLYT-01**: Privacy-friendly analytics (Plausible or Vercel Analytics)
+
+## Out of Scope
+
+Explicitly excluded. Documented to prevent scope creep.
+
+| Feature | Reason |
+|---------|--------|
+| Contact form | Using Calendly integration instead — lower friction |
+| CMS integration | Static content sufficient for v1; premature complexity |
+| Multi-page navigation | Single-page layout; sections use anchor links |
+| Live chat widget | Adds overhead, slows site, Calendly handles intake |
+| Pricing calculator | Consultancy pricing is custom; "contact for quote" approach |
+| Social media feeds | External dependency, can break, looks dated |
+| Auto-playing video | Accessibility issue, bandwidth cost |
+| GSAP / heavy animation libraries | Overkill for subtle animations; Intersection Observer sufficient |
+| OAuth / authentication | Brochure site, no user accounts needed |
+| Dark/light mode toggle | Dark-only design per design direction |
+
+## Traceability
+
+Which phases cover which requirements. Updated during roadmap creation.
+
+| Requirement | Phase | Status |
+|-------------|-------|--------|
+| (Populated by roadmap) | | |
+
+**Coverage:**
+- v1 requirements: 20 total
+- Mapped to phases: 0
+- Unmapped: 20 ⚠️
+
+---
+*Requirements defined: 2026-02-16*
+*Last updated: 2026-02-16 after initial definition*
