@@ -17,7 +17,7 @@ const manrope = Manrope({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://zachsaiddev.github.io'),
+  metadataBase: new URL('https://buildwithmira.co.uk'),
   title: 'Mira Consultancy — Custom Software for Growing Businesses',
   description:
     'Custom applications, AI agents, and workflow automation — built with precision for businesses that need to move fast.',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title: 'Mira Consultancy — Custom Software for Growing Businesses',
     description:
       'Custom applications, AI agents, and workflow automation — built with precision for businesses that need to move fast.',
-    url: 'https://zachsaiddev.github.io/mira-consultancy',
+    url: 'https://buildwithmira.co.uk',
     siteName: 'Mira Consultancy',
     locale: 'en_US',
     type: 'website',
