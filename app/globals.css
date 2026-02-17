@@ -10,8 +10,8 @@
   --color-text-secondary: #a3a3a3;  /* Ratio: 7.8:1  — supporting text, descriptions */
   --color-text-tertiary: #7a7a7a;   /* Ratio: 4.6:1  — subtle labels, metadata */
 
-  /* Accent — warm off-white for emphasis and CTAs */
-  --color-accent: #fafaf9;          /* Ratio: 19.8:1 — warm white, distinct from cool #f5f5f5 */
+  /* Accent — muted steel blue for emphasis and CTAs */
+  --color-accent: #7a9eb8;          /* Ratio: ~5.5:1 — muted steel blue, WCAG AA compliant against #0a0a0a */
 
   /* === Typography — Font families === */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
@@ -28,6 +28,10 @@
   --font-size-2xl: clamp(2rem, 1.5rem + 2.5vw, 2.667rem);
   --font-size-3xl: clamp(2.5rem, 1.88rem + 3.13vw, 3.375rem);
   --font-size-4xl: clamp(3rem, 2.25rem + 3.75vw, 4rem);
+  --font-size-5xl: clamp(3.5rem, 2.5rem + 5vw, 5rem);
+
+  /* === Typography — Letter-spacing tokens === */
+  --tracking-editorial: -0.035em;
 
   /* === Spacing — Generous editorial whitespace === */
   --spacing-section: clamp(5rem, 4rem + 5vw, 9rem);
@@ -75,7 +79,21 @@
 
   body {
     background-color: var(--color-background);
+    background:
+      radial-gradient(ellipse 80% 50% at 20% 0%, rgba(255,255,255,0.03) 0%, transparent 60%),
+      linear-gradient(160deg, #0d0d0f 0%, #0a0a0a 50%, #08080a 100%);
     color: var(--color-text-primary);
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+    opacity: 0.035;
   }
 
   /* Heading defaults — display font with tight tracking */
@@ -90,6 +108,18 @@
   h2 { font-size: var(--font-size-3xl); }
   h3 { font-size: var(--font-size-2xl); }
   h4 { font-size: var(--font-size-xl); }
+
+  /* Hero headline: larger, bolder, tighter — overrides shared heading block above */
+  h1 {
+    font-size: var(--font-size-5xl);
+    letter-spacing: var(--tracking-editorial);
+    font-weight: 700;
+  }
+
+  /* Editorial tracking for h2 — tighter than h3–h6 */
+  h2 {
+    letter-spacing: var(--tracking-editorial);
+  }
 
   /* Body text defaults */
   p, li {
