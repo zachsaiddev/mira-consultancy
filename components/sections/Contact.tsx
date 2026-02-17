@@ -23,8 +23,8 @@ export function Contact() {
               <Button onClick={() => setShowCalendly(true)}>
                 Get in touch
               </Button>
-              <Button href="mailto:hello@mira.co" variant="secondary">
-                hello@mira.co
+              <Button href="mailto:hello@buildwithmira.co.uk" variant="secondary">
+                hello@buildwithmira.co.uk
               </Button>
             </div>
           </div>

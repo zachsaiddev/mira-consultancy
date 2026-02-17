@@ -31,7 +31,7 @@ export function Footer() {
             <GitHubIcon className="w-5 h-5" />
           </a>
           <a
-            href="mailto:hello@mira.co"
+            href="mailto:hello@buildwithmira.co.uk"
             className="text-text-secondary hover:text-text-primary transition-colors"
             aria-label="Email contact"
           >
