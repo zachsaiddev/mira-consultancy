@@ -11,7 +11,7 @@ export function Hero() {
     <AnimatedSection as="section" className="min-h-[70vh] flex items-center section-padding">
       <div className="prose-width">
         <Image
-          src="/images/logo.png"
+          src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/images/logo.png`}
           alt="Mira Consultancy"
           width={48}
           height={32}
