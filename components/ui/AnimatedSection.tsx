@@ -3,6 +3,7 @@
 import { useInView } from 'react-intersection-observer';
 import { Children, cloneElement, isValidElement } from 'react';
 import { cn } from '@/lib/utils';
+import { usePrefersReducedMotion } from '@/lib/hooks/usePrefersReducedMotion';
 
 interface AnimatedSectionProps {
   children: React.ReactNode;
@@ -26,6 +27,17 @@ export function AnimatedSection({
     triggerOnce: true,
     threshold,
   });
+  const prefersReduced = usePrefersReducedMotion();
+
+  // Skip all animation for reduced-motion users — render content immediately visible
+  // to avoid the opacity-0 flash that otherwise occurs before inView triggers.
+  if (prefersReduced) {
+    return (
+      <Element className={className}>
+        {children}
+      </Element>
+    );
+  }
 
   // Simple fade + slide (no stagger) — entire section animates as one unit
   if (!stagger) {
