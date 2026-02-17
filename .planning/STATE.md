@@ -9,12 +9,12 @@ See: .planning/PROJECT.md (updated 2026-02-16)
 
 ## Current Position
 
-Phase: 04 of 5 (Polish & Performance) — In Progress
-Plan: 2 of N in current phase (04-02 complete)
-Status: In Progress
-Last activity: 2026-02-17 — 04-02-PLAN.md complete (mobile GPU performance + accessibility)
+Phase: 04 of 5 (Polish & Performance) — In Progress (awaiting human checkpoint)
+Plan: 3 of 3 in current phase (04-03 Task 1 complete, Task 2 checkpoint pending)
+Status: Checkpoint — awaiting human verify (mobile device + OG preview)
+Last activity: 2026-02-17 — 04-03-PLAN.md Task 1 complete (Lighthouse 98, deploy verified)
 
-Progress: [███████░░░] 70%
+Progress: [████████░░] 80%
 
 ## Performance Metrics
 
@@ -31,10 +31,10 @@ Progress: [███████░░░] 70%
 | 02 | 1 | 14 min | 14 min |
 | 03 | 3 | 12 min | 4.0 min |
 | 03.1 | 2 | 2 min | 1.0 min |
-| 04 | 2 | 3 min | 1.5 min |
+| 04 | 3 | 9 min | 3.0 min |
 
 **Recent Trend:**
-- Last 5 plans: 03-03 (5min), 03.1-01 (1min), 03.1-02 (1min), 04-01 (1min), 04-02 (2min)
+- Last 5 plans: 03.1-01 (1min), 03.1-02 (1min), 04-01 (1min), 04-02 (2min), 04-03 (6min)
 - Trend: Steady
 
 *Updated after each plan completion*
@@ -67,12 +67,14 @@ Recent decisions affecting current work:
 - prefers-reduced-motion guard on all motion hooks: accessibility requirement, hook returns immediately if set (03.1-03)
 - sharp used as transitive dependency via next — no separate install required (04-01)
 - app/opengraph-image.png file convention: Next.js auto-serves at /opengraph-image.png via metadataBase (04-01)
-- metadataBase set to https://zachsaiddev.github.io/mira-consultancy (includes basePath) (04-01)
+- metadataBase corrected to https://zachsaiddev.github.io (origin only) — including basePath caused double-path /mira-consultancy/mira-consultancy/ in og:image URL (04-03 bug fix)
 - About.tsx needs 'use client' to access NEXT_PUBLIC_BASE_PATH at render time (04-01)
 - usePrefersReducedMotion defaults false SSR-safe: animations enabled on server, corrected on mount (04-02)
 - blur(70px) on gradient orbs: quadratic cost reduction vs 100px, visually equivalent at 50-60vw scale (04-02)
 - AnimatedSection early-return for reduced-motion: prevents opacity-0 flash entirely, hooks still called unconditionally (04-02)
 - TechStack role=img + aria-label on wrapper, aria-hidden on inner SVG: correct ARIA pattern avoiding duplicate announcements (04-02)
+- Lighthouse run against live GitHub Pages URL (not local serve): local simulate throttling has intermittent NO_LCP LanternError in this CLI version (04-03)
+- favicon.ico 404 on GitHub Pages subdirectory deploy is expected — browser requests root-domain favicon which requires custom domain to fix (04-03)
 
 ### Pending Todos
 
@@ -89,5 +91,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-17
-Stopped at: Completed 04-02-PLAN.md (mobile GPU performance + accessibility — all tasks complete)
-Resume file: .planning/phases/04-polish-performance/04-02-SUMMARY.md
+Stopped at: 04-03-PLAN.md Task 2 checkpoint:human-verify — Lighthouse 98, OG metadata verified, awaiting user mobile device test + OG preview check
+Resume file: .planning/phases/04-polish-performance/04-03-SUMMARY.md
