@@ -9,7 +9,13 @@ export function About() {
         <h2 className="mb-12">Who I Am</h2>
         <div className="grid md:grid-cols-[200px_1fr] gap-8 items-start">
           {/* Photo column */}
-          <div className="w-48 h-48 md:w-full md:h-auto rounded-lg overflow-hidden bg-text-tertiary/10">
+          <div
+            className="w-48 h-48 md:w-full md:h-auto overflow-hidden"
+            style={{
+              maskImage: 'radial-gradient(ellipse 85% 85% at 50% 40%, black 40%, transparent 80%)',
+              WebkitMaskImage: 'radial-gradient(ellipse 85% 85% at 50% 40%, black 40%, transparent 80%)',
+            }}
+          >
             <Image
               src="/images/profile.jpg"
               alt="Zach Said"
