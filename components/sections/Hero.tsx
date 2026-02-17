@@ -1,14 +1,14 @@
 'use client';
 
 import Image from 'next/image';
-import { Button } from '@/components/ui';
+import { Button, AnimatedSection } from '@/components/ui';
 import { useParallax } from '@/lib/hooks/useParallax';
 
 export function Hero() {
   const headlineRef = useParallax<HTMLHeadingElement>(0.06);
 
   return (
-    <section className="min-h-[70vh] flex items-center section-padding">
+    <AnimatedSection as="section" className="min-h-[70vh] flex items-center section-padding">
       <div className="prose-width">
         <Image
           src="/images/logo.png"
@@ -30,6 +30,6 @@ export function Hero() {
           Let&apos;s talk
         </Button>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

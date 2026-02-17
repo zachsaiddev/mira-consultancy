@@ -5,6 +5,7 @@ export const serviceSchema = z.object({
   id: z.string().min(1),
   title: z.string().min(1),
   description: z.string().min(10),
+  icon: z.string().optional(),
 })
 
 export type Service = z.infer<typeof serviceSchema>
@@ -24,6 +25,7 @@ export const processStepSchema = z.object({
   step: z.number().int().min(1).max(4),
   title: z.string().min(1),
   description: z.string().min(10),
+  icon: z.string().optional(),
 })
 
 export type ProcessStep = z.infer<typeof processStepSchema>

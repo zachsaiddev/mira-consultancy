@@ -27,14 +27,14 @@ export function AnimatedSection({
     threshold,
   });
 
-  // Simple fade (no stagger) — entire section fades as one unit
+  // Simple fade + slide (no stagger) — entire section animates as one unit
   if (!stagger) {
     return (
       <Element
         ref={ref}
         className={cn(
-          'transition-opacity ease-out',
-          inView ? 'opacity-100' : 'opacity-0',
+          'transition-all ease-out',
+          inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5',
           className,
         )}
         style={{ transitionDuration: 'var(--animate-duration-fade)' }}
@@ -44,7 +44,7 @@ export function AnimatedSection({
     );
   }
 
-  // Staggered fade — each direct child fades in with increasing delay
+  // Staggered fade + slide — each direct child animates in with increasing delay
   const childArray = Children.toArray(children);
 
   return (
@@ -58,7 +58,8 @@ export function AnimatedSection({
           style: {
             ...(typeof element.props.style === 'object' ? element.props.style : {}),
             opacity: inView ? 1 : 0,
-            transition: `opacity var(--animate-duration-fade) var(--animate-ease-out)`,
+            transform: inView ? 'translateY(0)' : 'translateY(20px)',
+            transition: `opacity var(--animate-duration-fade) var(--animate-ease-out), transform var(--animate-duration-fade) var(--animate-ease-out)`,
             transitionDelay: `${index * 150}ms`,
           } as React.CSSProperties,
           className: element.props.className,
