@@ -17,19 +17,19 @@ export default function Home() {
       <Intro />
 
       {/* Dividers between remaining sections */}
-      <hr className="border-t border-text-tertiary/10" />
+      <hr className="border-t border-text-tertiary/20" />
       <Services />
 
-      <hr className="border-t border-text-tertiary/10" />
+      <hr className="border-t border-text-tertiary/20" />
       <Process />
 
-      <hr className="border-t border-text-tertiary/10" />
+      <hr className="border-t border-text-tertiary/20" />
       <TechStack />
 
-      <hr className="border-t border-text-tertiary/10" />
+      <hr className="border-t border-text-tertiary/20" />
       <About />
 
-      <hr className="border-t border-text-tertiary/10" />
+      <hr className="border-t border-text-tertiary/20" />
       <Contact />
 
       {/* Footer has its own top border */}
