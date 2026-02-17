@@ -17,9 +17,25 @@ const manrope = Manrope({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://zachsaiddev.github.io/mira-consultancy'),
   title: 'Mira Consultancy — Custom Software for Growing Businesses',
   description:
-    'I build custom internal applications, AI agents, and workflow automation for startups and scale-ups. Based in London, working globally.',
+    'Custom applications, AI agents, and workflow automation — built with precision for businesses that need to move fast.',
+  openGraph: {
+    title: 'Mira Consultancy — Custom Software for Growing Businesses',
+    description:
+      'Custom applications, AI agents, and workflow automation — built with precision for businesses that need to move fast.',
+    url: 'https://zachsaiddev.github.io/mira-consultancy',
+    siteName: 'Mira Consultancy',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Mira Consultancy — Custom Software for Growing Businesses',
+    description:
+      'Custom applications, AI agents, and workflow automation — built with precision for businesses that need to move fast.',
+  },
 }
 
 export default function RootLayout({
