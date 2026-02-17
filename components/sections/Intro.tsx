@@ -8,7 +8,7 @@ export function Intro() {
         <div className="group flex flex-col md:flex-row md:items-start gap-8 md:gap-12">
           <div className="shrink-0">
             <Image
-              src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/images/zach.png`}
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/images/zach.webp`}
               alt="Zach Said"
               width={200}
               height={200}

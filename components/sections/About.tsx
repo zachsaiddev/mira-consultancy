@@ -1,3 +1,5 @@
+'use client'
+
 import { AnimatedSection } from '@/components/ui'
 import Image from 'next/image'
 
@@ -17,7 +19,7 @@ export function About() {
             }}
           >
             <Image
-              src="/images/profile.jpg"
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/images/zach.webp`}
               alt="Zach Said"
               width={200}
               height={200}
