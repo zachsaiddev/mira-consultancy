@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Button, AnimatedSection, CalendlyModal } from '@/components/ui';
+import { prefetchCalendly } from '@/components/ui/CalendlyModal';
 
 const CALENDLY_URL = 'https://calendly.com/buildwithmira/discovery';
 
@@ -20,9 +21,11 @@ export function Contact() {
               email.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button onClick={() => setShowCalendly(true)}>
-                Get in touch
-              </Button>
+              <span onMouseEnter={() => prefetchCalendly(CALENDLY_URL)}>
+                <Button onClick={() => setShowCalendly(true)}>
+                  Get in touch
+                </Button>
+              </span>
               <Button href="mailto:hello@buildwithmira.co.uk" variant="secondary">
                 hello@buildwithmira.co.uk
               </Button>

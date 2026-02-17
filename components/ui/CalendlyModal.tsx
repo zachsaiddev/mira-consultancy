@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useCallback } from 'react'
+import { useEffect, useCallback, useState, useRef } from 'react'
 
 interface CalendlyModalProps {
   open: boolean
@@ -8,7 +8,22 @@ interface CalendlyModalProps {
   url: string
 }
 
+/** Prefetch Calendly on first hover over any booking button. */
+let prefetched = false
+export function prefetchCalendly(url: string) {
+  if (prefetched) return
+  prefetched = true
+  const link = document.createElement('link')
+  link.rel = 'prefetch'
+  link.href = url
+  link.as = 'document'
+  document.head.appendChild(link)
+}
+
 export function CalendlyModal({ open, onClose, url }: CalendlyModalProps) {
+  const [loaded, setLoaded] = useState(false)
+  const iframeRef = useRef<HTMLIFrameElement>(null)
+
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose()
@@ -18,6 +33,7 @@ export function CalendlyModal({ open, onClose, url }: CalendlyModalProps) {
 
   useEffect(() => {
     if (open) {
+      setLoaded(false)
       document.body.style.overflow = 'hidden'
       document.addEventListener('keydown', handleKeyDown)
     }
@@ -51,9 +67,19 @@ export function CalendlyModal({ open, onClose, url }: CalendlyModalProps) {
         >
           Close &times;
         </button>
+
+        {/* Loading spinner */}
+        {!loaded && (
+          <div className="absolute inset-0 flex items-center justify-center rounded-lg border border-accent/15 bg-background">
+            <div className="w-6 h-6 border-2 border-accent/30 border-t-accent rounded-full animate-spin" />
+          </div>
+        )}
+
         <iframe
+          ref={iframeRef}
           src={url}
-          className="w-full h-full rounded-lg border border-accent/15"
+          onLoad={() => setLoaded(true)}
+          className={`w-full h-full rounded-lg border border-accent/15 transition-opacity duration-300 ${loaded ? 'opacity-100' : 'opacity-0'}`}
           title="Book a discovery call"
         />
       </div>

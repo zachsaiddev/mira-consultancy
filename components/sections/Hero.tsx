@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { Button, AnimatedSection, CalendlyModal } from '@/components/ui';
+import { prefetchCalendly } from '@/components/ui/CalendlyModal';
 import { useParallax } from '@/lib/hooks/useParallax';
 
 const CALENDLY_URL = 'https://calendly.com/buildwithmira/discovery';
@@ -31,9 +32,11 @@ export function Hero() {
             Custom applications, AI agents, and workflow automation — built with
             precision for businesses that need to move fast.
           </p>
-          <Button onClick={() => setShowCalendly(true)}>
-            Let&apos;s talk
-          </Button>
+          <span onMouseEnter={() => prefetchCalendly(CALENDLY_URL)}>
+            <Button onClick={() => setShowCalendly(true)}>
+              Let&apos;s talk
+            </Button>
+          </span>
         </div>
       </AnimatedSection>
       <CalendlyModal

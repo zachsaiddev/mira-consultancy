@@ -45,6 +45,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${manrope.variable} dark`}>
+      <head>
+        <link rel="preconnect" href="https://calendly.com" />
+        <link rel="dns-prefetch" href="https://calendly.com" />
+      </head>
       <body className="bg-background text-text-primary font-sans antialiased">
         <BackgroundGradient />
         {children}
