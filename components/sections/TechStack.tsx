@@ -33,9 +33,11 @@ export function TechStack() {
               <div
                 key={tech.id}
                 className="opacity-40 hover:opacity-100 transition-opacity duration-200"
+                role="img"
+                aria-label={tech.name}
                 title={tech.name}
               >
-                <Icon className="w-8 h-8" />
+                <Icon className="w-8 h-8" aria-hidden="true" />
               </div>
             )
           })}

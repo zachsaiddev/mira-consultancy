@@ -105,7 +105,7 @@
   .gradient-orb {
     position: absolute;
     border-radius: 50%;
-    filter: blur(100px);
+    filter: blur(70px);
     will-change: transform, opacity, translate;
     transition: translate 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
   }
