@@ -14,11 +14,11 @@ export function Contact() {
       <AnimatedSection as="section" stagger className="section-padding">
         <div className="prose-width">
           <p className="section-label mb-4">Get in Touch</p>
-          <h2 className="mb-6">Got a problem that needs solving?</h2>
+          <h2 className="mb-6">Got something that needs fixing?</h2>
           <div className="section-card">
             <p className="text-lg text-text-secondary mb-8 max-w-[38rem]">
-              Ready to discuss your project? Book a discovery call or drop me an
-              email.
+              Tell me what&apos;s not working. No sales pitch, no commitment — just
+              a straight conversation about whether I can help.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <span onMouseEnter={() => prefetchCalendly(CALENDLY_URL)}>

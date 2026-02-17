@@ -19,7 +19,13 @@ export function Process() {
     <AnimatedSection as="section" stagger className="section-padding">
       <div className="prose-width">
         <p className="section-label mb-4">How I Work</p>
-        <h2 className="mb-12">Process</h2>
+        <h2 className="mb-6">One person, start to finish</h2>
+        <p className="text-text-secondary mb-12 max-w-[38rem]">
+          I don&apos;t design something and hand you a PDF. I don&apos;t build
+          something and disappear. One person owns the problem from discovery
+          through to delivery — fewer misunderstandings, faster decisions, and a
+          result that actually matches what you asked for.
+        </p>
         <div className="section-card divide-y divide-accent/10">
           {processSteps.map((step) => {
             const Icon = step.icon ? processIcons[step.icon] : null;

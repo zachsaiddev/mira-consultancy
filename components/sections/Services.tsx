@@ -21,7 +21,7 @@ export function Services() {
     <AnimatedSection as="section" stagger className="section-padding">
       <div className="prose-width">
         <p className="section-label mb-4">What I Do</p>
-        <h2 className="mb-12">Services</h2>
+        <h2 className="mb-12">What I Do</h2>
         <div className="section-card divide-y divide-accent/10">
           {services.map((service) => {
             const Icon = service.icon ? serviceIcons[service.icon] : null;

@@ -7,7 +7,7 @@ const processStepsData = [
     title: 'Discovery',
     icon: 'search',
     description:
-      'Understanding the problem, the context, and what success looks like. We talk through your goals, constraints, and the outcomes you need.',
+      'I sit with your team and ask the right questions. Leadership, operations, finance — whoever\'s involved. We get clear on what success looks like before anyone touches code.',
   },
   {
     id: 'design',
@@ -15,7 +15,7 @@ const processStepsData = [
     title: 'Design',
     icon: 'pen-ruler',
     description:
-      'Planning the solution — architecture, technology choices, and a clear roadmap. You get a technical plan that makes sense for your business.',
+      'I map the solution — architecture, data model, integrations. You get something that makes sense to both the technical and non-technical people in the room.',
   },
   {
     id: 'build',
@@ -23,15 +23,23 @@ const processStepsData = [
     title: 'Build',
     icon: 'code',
     description:
-      'Iterative development with regular check-ins and demos. You see progress weekly, provide feedback, and steer direction as we go.',
+      'Iterative, with regular check-ins. You see progress early, give feedback often, and course-correct before anything goes too far.',
+  },
+  {
+    id: 'implement',
+    step: 4,
+    title: 'Implement',
+    icon: 'shield',
+    description:
+      'Go-live, documentation, training, handover. Your team knows how to use it and trusts it.',
   },
   {
     id: 'support',
-    step: 4,
+    step: 5,
     title: 'Support',
     icon: 'shield',
     description:
-      'Ongoing maintenance, bug fixes, and feature enhancements. The software keeps working, and evolves as your business does.',
+      'I stick around. Things evolve, requirements shift, new ideas surface. The system grows with you.',
   },
 ] as const satisfies readonly ProcessStep[]
 

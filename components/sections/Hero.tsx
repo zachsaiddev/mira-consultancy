@@ -29,8 +29,8 @@ export function Hero() {
             I build the tools your business actually needs.
           </h1>
           <p className="text-lg text-text-secondary max-w-[38rem] mb-8">
-            Custom applications, AI agents, and workflow automation — built with
-            precision for businesses that need to move fast.
+            Solutions architecture, platform development, and implementation
+            consulting for businesses that have outgrown their spreadsheets.
           </p>
           <span onMouseEnter={() => prefetchCalendly(CALENDLY_URL)}>
             <Button onClick={() => setShowCalendly(true)}>

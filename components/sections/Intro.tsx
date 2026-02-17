@@ -17,16 +17,25 @@ export function Intro() {
           </div>
           <div>
             <p className="text-lg leading-relaxed text-text-secondary mb-6">
-              I&apos;m Zach, and I build software for businesses that need custom tools
-              but don&apos;t have the time or team to build them in-house.
+              Every growing business hits the same wall. The data&apos;s in twelve
+              places. Reporting takes three days when it should take three minutes.
+              Teams are working around broken processes because &ldquo;that&apos;s
+              just how we do it.&rdquo; Everyone knows it&apos;s not working, but
+              nobody&apos;s sure what the fix looks like.
             </p>
             <p className="text-lg leading-relaxed text-text-secondary mb-6">
-              Since 2018, I&apos;ve worked with startups, agencies, and scale-ups to
-              design and build internal applications, AI-powered workflows, and
-              technical infrastructure that actually gets used.
+              I&apos;m Zach. I help businesses figure that out and then build it. I
+              run the discovery sessions with your leadership team, design the
+              architecture, build the platform, and stay involved through go-live
+              and adoption. One person, the whole way through — which means nothing
+              gets lost in translation between what you asked for and what actually
+              gets built.
             </p>
             <p className="text-lg leading-relaxed text-text-secondary">
-              Based in London, working with clients across Europe and North America.
+              I&apos;ve done this across agencies, startups, scale-ups, and
+              non-profits. The specifics change every time. The approach
+              doesn&apos;t: understand the business properly, then build something
+              that fits.
             </p>
           </div>
         </div>

@@ -2,39 +2,39 @@ import { serviceSchema, type Service } from '@/lib/schemas/content'
 
 const servicesData = [
   {
-    id: 'custom-internal-applications',
-    title: 'Custom Internal Applications',
-    icon: 'app-window',
-    description:
-      'Bespoke tools tailored to your workflows — CRMs, dashboards, admin panels, and process automation. Built to replace clunky spreadsheets and manual processes with fast, reliable software.',
-  },
-  {
-    id: 'ai-agent-systems',
-    title: 'AI Agent Systems',
-    icon: 'brain',
-    description:
-      'Intelligent automation powered by LLMs — customer support agents, data extraction pipelines, content generation systems. AI that actually works for your business, not just experiments.',
-  },
-  {
-    id: 'workflow-automation',
-    title: 'Workflow Automation',
-    icon: 'workflow',
-    description:
-      'Connect your tools, eliminate repetitive tasks, and streamline operations. From simple integrations to complex multi-step workflows — automation that saves time and reduces errors.',
-  },
-  {
-    id: 'system-architecture-design',
-    title: 'System Architecture & Design',
+    id: 'solutions-architecture',
+    title: 'Solutions Architecture & Design',
     icon: 'blueprint',
     description:
-      'Strategic technical planning for new products or system migrations. Choosing the right stack, designing scalable architecture, and creating technical roadmaps that align with business goals.',
+      'You know something needs to change but the technical path isn\'t clear. I work with your leadership team to understand the real problem, map out requirements, and design an architecture that makes sense for where your business is going — not just a quick fix for today.',
   },
   {
-    id: 'technical-advisory',
-    title: 'Technical Advisory',
+    id: 'custom-platform-development',
+    title: 'Custom Platform Development',
+    icon: 'app-window',
+    description:
+      'The systems your business actually runs on — finance platforms, operational dashboards, internal tools, data hubs. I build these end-to-end in TypeScript, React, and Supabase, wired into your existing tools and designed around how your team actually works.',
+  },
+  {
+    id: 'data-architecture',
+    title: 'Data Architecture & Governance',
+    icon: 'workflow',
+    description:
+      'If your data lives in five different tools and none of them agree, you\'ve got a problem that only gets worse as you grow. I design master data strategies that bring everything into one place — proper ownership, clear structures, automated sync, and a single version of the truth.',
+  },
+  {
+    id: 'ai-automation',
+    title: 'AI & Automation',
+    icon: 'brain',
+    description:
+      'Not AI for the sake of it. Practical automation that takes repetitive work off your team\'s plate — data enrichment, reporting, workflow orchestration, process automation. The kind of stuff that saves hours every week and actually sticks.',
+  },
+  {
+    id: 'implementation-change-management',
+    title: 'Implementation & Change Management',
     icon: 'compass',
     description:
-      'Ongoing technical guidance for product teams — code reviews, architecture decisions, technology selection, and implementation strategy. A trusted technical voice when you need one.',
+      'A great system that nobody uses is a waste of everyone\'s time. I handle go-live, documentation, training, and the messy human side of getting people to trust something new. The job isn\'t done until your team is running it without me.',
   },
 ] as const satisfies readonly Service[]
 

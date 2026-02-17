@@ -18,13 +18,13 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://buildwithmira.co.uk'),
-  title: 'Build with Mira — Custom Software for Growing Businesses',
+  title: 'Build with Mira — Solutions Architecture & Implementation Consulting',
   description:
-    'Custom applications, AI agents, and workflow automation — built with precision for businesses that need to move fast.',
+    'Solutions architecture, platform development, and implementation consulting for businesses that have outgrown their spreadsheets.',
   openGraph: {
-    title: 'Build with Mira — Custom Software for Growing Businesses',
+    title: 'Build with Mira — Solutions Architecture & Implementation Consulting',
     description:
-      'Custom applications, AI agents, and workflow automation — built with precision for businesses that need to move fast.',
+      'Solutions architecture, platform development, and implementation consulting for businesses that have outgrown their spreadsheets.',
     url: 'https://buildwithmira.co.uk',
     siteName: 'Build with Mira',
     locale: 'en_US',
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Build with Mira — Custom Software for Growing Businesses',
+    title: 'Build with Mira — Solutions Architecture & Implementation Consulting',
     description:
-      'Custom applications, AI agents, and workflow automation — built with precision for businesses that need to move fast.',
+      'Solutions architecture, platform development, and implementation consulting for businesses that have outgrown their spreadsheets.',
   },
 }
 

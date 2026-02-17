@@ -22,7 +22,7 @@ export type TechStackItem = z.infer<typeof techStackItemSchema>
 // ProcessStep schema for the 4 "How I Work" steps
 export const processStepSchema = z.object({
   id: z.string().min(1),
-  step: z.number().int().min(1).max(4),
+  step: z.number().int().min(1).max(5),
   title: z.string().min(1),
   description: z.string().min(10),
   icon: z.string().optional(),
