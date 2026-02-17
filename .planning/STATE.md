@@ -10,9 +10,9 @@ See: .planning/PROJECT.md (updated 2026-02-16)
 ## Current Position
 
 Phase: 03.1 of 5 (Visual Polish & Styling) — In Progress
-Plan: 2 of N in current phase
-Status: In Progress
-Last activity: 2026-02-17 — Completed 03.1-02-PLAN.md
+Plan: 3 of N in current phase
+Status: In Progress (awaiting checkpoint:human-verify for 03.1-03)
+Last activity: 2026-02-17 — Task 1 of 03.1-03-PLAN.md complete, at visual verification checkpoint
 
 Progress: [██████░░░░] 60%
 
@@ -62,6 +62,8 @@ Recent decisions affecting current work:
 - divide-y replaces space-y-10 for magazine list pattern: Tailwind divide-y adds border-top to every child except first, producing clean index-style rules without extra markup (03.1-02)
 - maskImage radial-gradient ellipse 85% 85% at 50% 40%: Center offset suits portrait photos; transparent at 80% gives soft fade (03.1-02)
 - Heading stays unchanged on hover, only description brightens: Restrained hover effect per locked design decision (03.1-02)
+- useParallax speed 0.06 on Hero h1: subtle depth without layout shift, rAF-batched, passive listener (03.1-03)
+- prefers-reduced-motion guard on all motion hooks: accessibility requirement, hook returns immediately if set (03.1-03)
 
 ### Pending Todos
 
@@ -78,5 +80,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-17
-Stopped at: Completed 03.1-02-PLAN.md (Visual Polish — content section polish)
-Resume file: .planning/phases/03.1-visual-polish-styling/03.1-02-SUMMARY.md
+Stopped at: checkpoint:human-verify in 03.1-03-PLAN.md (Task 2 — complete visual polish verification)
+Resume file: .planning/phases/03.1-visual-polish-styling/03.1-03-SUMMARY.md
