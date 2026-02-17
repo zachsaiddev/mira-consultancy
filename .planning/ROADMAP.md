@@ -69,6 +69,26 @@ Plans:
 - [ ] 03-02-PLAN.md -- Icon components (social + tech) + TechStack, About, Footer sections
 - [ ] 03-03-PLAN.md -- Page assembly with dividers, SEO metadata, and responsive verification
 
+### Phase 03.1: Visual Polish & Styling (INSERTED)
+
+**Goal:** Elevate visual presentation with depth, texture, and refined styling — gradient + grain background, editorial typography, magazine-style ruled lines, photo fade, and parallax-lite scroll effects
+**Depends on:** Phase 3
+**Requirements**: DESGN-01, DESGN-02, DESGN-03, DESGN-04, ANIM-01, ANIM-02, ANIM-03
+**Success Criteria** (what must be TRUE):
+  1. Background has visible depth with gradient and grain texture overlay
+  2. Accent color is a cool muted blue/teal (WCAG AA compliant) replacing warm white
+  3. Hero headline is commanding — larger, bolder, with tighter editorial tracking
+  4. Service and process items are separated by thin horizontal ruled lines
+  5. About photo edges fade/blend into the dark background
+  6. Hero headline has subtle parallax depth effect on scroll
+  7. All non-essential animations disabled when prefers-reduced-motion is set
+**Plans:** 3 plans
+
+Plans:
+- [ ] 03.1-01-PLAN.md — Design system foundations (gradient + grain background, accent color, typography tokens, section divider fix)
+- [ ] 03.1-02-PLAN.md — Component visual updates (ruled lines, hover states, photo fade, hero styling)
+- [ ] 03.1-03-PLAN.md — Parallax hook + visual verification checkpoint
+
 ### Phase 4: Polish & Performance
 **Goal**: Optimize for production launch with performance and accessibility validation
 **Depends on**: Phase 3
