@@ -10,16 +10,16 @@ See: .planning/PROJECT.md (updated 2026-02-16)
 ## Current Position
 
 Phase: 03.1 of 5 (Visual Polish & Styling) — In Progress
-Plan: 1 of N in current phase
+Plan: 2 of N in current phase
 Status: In Progress
-Last activity: 2026-02-17 — Completed 03.1-01-PLAN.md
+Last activity: 2026-02-17 — Completed 03.1-02-PLAN.md
 
 Progress: [██████░░░░] 60%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 7
+- Total plans completed: 8
 - Average duration: 5.3 min
 - Total execution time: 0.61 hours
 
@@ -30,10 +30,10 @@ Progress: [██████░░░░] 60%
 | 01 | 2 | 11 min | 5.5 min |
 | 02 | 1 | 14 min | 14 min |
 | 03 | 3 | 12 min | 4.0 min |
-| 03.1 | 1 | 1 min | 1.0 min |
+| 03.1 | 2 | 2 min | 1.0 min |
 
 **Recent Trend:**
-- Last 5 plans: 02-01 (14min), 03-01 (1min), 03-02 (6min), 03-03 (5min), 03.1-01 (1min)
+- Last 5 plans: 03-01 (1min), 03-02 (6min), 03-03 (5min), 03.1-01 (1min), 03.1-02 (1min)
 - Trend: Steady
 
 *Updated after each plan completion*
@@ -59,6 +59,9 @@ Recent decisions affecting current work:
 - Accent color #7a9eb8 muted steel blue: WCAG AA ~5.5:1, visually distinct from previous warm white (03.1-01)
 - Film grain via SVG feTurbulence data-URI at opacity 0.035: static, fixed position, z-index -1 (03.1-01)
 - h1 override after shared heading block: CSS cascade sets 5xl size and editorial tracking without duplicating shared rules (03.1-01)
+- divide-y replaces space-y-10 for magazine list pattern: Tailwind divide-y adds border-top to every child except first, producing clean index-style rules without extra markup (03.1-02)
+- maskImage radial-gradient ellipse 85% 85% at 50% 40%: Center offset suits portrait photos; transparent at 80% gives soft fade (03.1-02)
+- Heading stays unchanged on hover, only description brightens: Restrained hover effect per locked design decision (03.1-02)
 
 ### Pending Todos
 
@@ -75,5 +78,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-17
-Stopped at: Completed 03.1-01-PLAN.md (Visual Polish — design system foundations)
-Resume file: .planning/phases/03.1-visual-polish-styling/03.1-01-SUMMARY.md
+Stopped at: Completed 03.1-02-PLAN.md (Visual Polish — content section polish)
+Resume file: .planning/phases/03.1-visual-polish-styling/03.1-02-SUMMARY.md
