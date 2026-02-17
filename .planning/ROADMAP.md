@@ -99,11 +99,12 @@ Plans:
   3. Site tested on real mobile device (iPhone or Android) with no layout breaks or performance issues
   4. OpenGraph meta tags generate correct social media previews
   5. Core Web Vitals meet thresholds (CLS <0.1, LCP <2.5s, FID <100ms)
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 04-01: TBD
-- [ ] 04-02: TBD
+- [ ] 04-01-PLAN.md — Image optimization (WebP conversion, profile.jpg fix), OG image, metadata
+- [ ] 04-02-PLAN.md — Performance tuning (blur optimization, AnimatedSection reduced-motion), accessibility
+- [ ] 04-03-PLAN.md — Deploy, Lighthouse audit, mobile verification checkpoint
 
 ### Phase 5: Future Architecture
 **Goal**: Document routing and component structure for future blog and case studies sections without building them
