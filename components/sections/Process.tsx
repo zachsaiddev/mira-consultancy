@@ -7,14 +7,16 @@ export function Process() {
       <div className="prose-width">
         <p className="section-label mb-4">How I Work</p>
         <h2 className="mb-12">Process</h2>
-        <div className="space-y-10">
+        <div className="divide-y divide-text-tertiary/20">
           {processSteps.map((step) => (
-            <div key={step.id}>
+            <div key={step.id} className="py-8 first:pt-0 last:pb-0 group cursor-default">
               <p className="section-label mb-2">
                 {String(step.step).padStart(2, '0')}
               </p>
               <h3 className="text-xl mb-2">{step.title}</h3>
-              <p className="text-text-secondary">{step.description}</p>
+              <p className="text-text-secondary transition-colors duration-200 group-hover:text-text-primary">
+                {step.description}
+              </p>
             </div>
           ))}
         </div>
