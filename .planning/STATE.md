@@ -60,6 +60,10 @@ Recent decisions affecting current work:
 
 None yet.
 
+### Roadmap Evolution
+
+- Phase 03.1 inserted after Phase 3: Visual Polish & Styling (INSERTED)
+
 ### Blockers/Concerns
 
 None yet.
