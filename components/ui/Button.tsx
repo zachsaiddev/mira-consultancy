@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils';
 interface ButtonProps {
   href: string;
   children: React.ReactNode;
-  /** 'primary' = accent color with arrow. 'secondary' = muted text, no arrow. */
+  /** 'primary' = filled accent button. 'secondary' = outlined accent button. */
   variant?: 'primary' | 'secondary';
   className?: string;
   /** Opens link in new tab. Default false. */
@@ -21,10 +21,11 @@ export function Button({
     <a
       href={href}
       className={cn(
-        'group inline-flex items-center gap-2 font-medium transition-colors',
-        variant === 'primary' && 'text-accent hover:text-accent/80',
+        'inline-flex items-center gap-2 font-medium px-6 py-3 transition-all',
+        variant === 'primary' &&
+          'bg-accent text-background hover:bg-accent/85 active:bg-accent/75',
         variant === 'secondary' &&
-          'text-text-secondary hover:text-text-primary link-underline',
+          'border border-accent/30 text-accent hover:border-accent/60 hover:bg-accent/5',
         className,
       )}
       style={{ transitionDuration: 'var(--animate-duration-base)' }}

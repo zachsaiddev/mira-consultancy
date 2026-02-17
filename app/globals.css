@@ -2,8 +2,8 @@
 
 @theme {
   /* === Colors — Dark monochrome palette === */
-  /* Background: near-black charcoal (softer than pure black, less harsh on screens) */
-  --color-background: #0a0a0a;
+  /* Background: deep navy-black with subtle blue undertone */
+  --color-background: #0a0c14;
 
   /* Text hierarchy — all verified WCAG AA compliant against #0a0a0a */
   --color-text-primary: #f5f5f5;    /* Ratio: 18.2:1 — main body text */
@@ -69,6 +69,13 @@
   padding-block: var(--spacing-section-sm);
 }
 
+@utility section-card {
+  border: 1px solid rgba(122, 158, 184, 0.12);
+  border-top: 2px solid rgba(122, 158, 184, 0.4);
+  background: rgba(255, 255, 255, 0.025);
+  padding: clamp(1.5rem, 1.25rem + 1.25vw, 2.5rem);
+}
+
 /* === Base layer === */
 @layer base {
   html {
@@ -79,21 +86,99 @@
 
   body {
     background-color: var(--color-background);
-    background:
-      radial-gradient(ellipse 80% 50% at 20% 0%, rgba(255,255,255,0.03) 0%, transparent 60%),
-      linear-gradient(160deg, #0d0d0f 0%, #0a0a0a 50%, #08080a 100%);
     color: var(--color-text-primary);
   }
 
+  /* Film grain texture — sits above gradient orbs (-z-20), below content */
   body::before {
     content: '';
     position: fixed;
     inset: 0;
-    z-index: -1;
+    z-index: -10;
     pointer-events: none;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3C/svg%3E");
     background-size: 200px 200px;
-    opacity: 0.035;
+    opacity: 0.12;
+  }
+
+  /* === Animated gradient orbs === */
+  .gradient-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    will-change: transform, opacity, translate;
+    transition: translate 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .gradient-orb-blue {
+    width: 60vw;
+    height: 60vh;
+    top: -15%;
+    left: 10%;
+    background: radial-gradient(circle, rgba(105,197,240,0.35) 0%, transparent 70%);
+    animation: drift-blue 25s ease-in-out infinite;
+  }
+
+  .gradient-orb-violet {
+    width: 50vw;
+    height: 50vh;
+    top: 10%;
+    right: -5%;
+    background: radial-gradient(circle, rgba(123,92,214,0.28) 0%, transparent 70%);
+    animation: drift-violet 30s ease-in-out infinite;
+  }
+
+  .gradient-orb-magenta {
+    width: 45vw;
+    height: 45vh;
+    top: 45%;
+    left: -10%;
+    background: radial-gradient(circle, rgba(200,77,176,0.22) 0%, transparent 70%);
+    animation: drift-magenta 28s ease-in-out infinite;
+  }
+
+  .gradient-orb-coral {
+    width: 55vw;
+    height: 50vh;
+    bottom: -10%;
+    right: 0%;
+    background: radial-gradient(circle, rgba(244,112,96,0.25) 0%, transparent 70%);
+    animation: drift-coral 32s ease-in-out infinite;
+  }
+
+  @keyframes drift-blue {
+    0%, 100% { transform: translate(0, 0) scale(1); opacity: 1; }
+    25% { transform: translate(8vw, 5vh) scale(1.1); opacity: 0.8; }
+    50% { transform: translate(-3vw, 10vh) scale(0.95); opacity: 1; }
+    75% { transform: translate(5vw, -3vh) scale(1.05); opacity: 0.85; }
+  }
+
+  @keyframes drift-violet {
+    0%, 100% { transform: translate(0, 0) scale(1); opacity: 1; }
+    25% { transform: translate(-6vw, 8vh) scale(1.08); opacity: 0.85; }
+    50% { transform: translate(4vw, 3vh) scale(1.15); opacity: 0.75; }
+    75% { transform: translate(-3vw, -5vh) scale(0.9); opacity: 1; }
+  }
+
+  @keyframes drift-magenta {
+    0%, 100% { transform: translate(0, 0) scale(1); opacity: 1; }
+    25% { transform: translate(10vw, -4vh) scale(1.12); opacity: 0.8; }
+    50% { transform: translate(5vw, 8vh) scale(0.92); opacity: 0.9; }
+    75% { transform: translate(-4vw, 3vh) scale(1.05); opacity: 1; }
+  }
+
+  @keyframes drift-coral {
+    0%, 100% { transform: translate(0, 0) scale(1); opacity: 1; }
+    25% { transform: translate(-8vw, -6vh) scale(1.1); opacity: 0.9; }
+    50% { transform: translate(3vw, -10vh) scale(1.05); opacity: 0.8; }
+    75% { transform: translate(-5vw, 4vh) scale(0.95); opacity: 1; }
+  }
+
+  /* Pause orb animations for reduced-motion users */
+  @media (prefers-reduced-motion: reduce) {
+    .gradient-orb {
+      animation: none !important;
+    }
   }
 
   /* Heading defaults — display font with tight tracking */
@@ -116,9 +201,22 @@
     font-weight: 700;
   }
 
-  /* Editorial tracking for h2 — tighter than h3–h6 */
+  /* Editorial tracking for h2 + accent underline bar */
   h2 {
     letter-spacing: var(--tracking-editorial);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.75rem;
+  }
+
+  h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 3rem;
+    height: 2px;
+    background: var(--color-accent);
   }
 
   /* Body text defaults */
@@ -128,13 +226,13 @@
     color: var(--color-text-secondary);
   }
 
-  /* Small-caps section labels (borrowed from Luciano Pereira reference) */
+  /* Small-caps section labels — accent color for visual punch */
   .section-label {
     font-family: var(--font-mono);
     font-size: var(--font-size-sm);
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--color-text-tertiary);
+    color: var(--color-accent);
   }
 
   /* Disable all non-essential animations for users who prefer reduced motion */

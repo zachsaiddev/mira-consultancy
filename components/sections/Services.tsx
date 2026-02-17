@@ -7,7 +7,7 @@ export function Services() {
       <div className="prose-width">
         <p className="section-label mb-4">What I Do</p>
         <h2 className="mb-12">Services</h2>
-        <div className="divide-y divide-text-tertiary/20">
+        <div className="section-card divide-y divide-accent/10">
           {services.map((service) => (
             <div key={service.id} className="py-8 first:pt-0 last:pb-0 group cursor-default">
               <h3 className="text-xl mb-2">{service.title}</h3>

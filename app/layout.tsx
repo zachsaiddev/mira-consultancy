@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter, Manrope } from 'next/font/google'
+import { BackgroundGradient } from '@/components/ui'
 import './globals.css'
 
 const inter = Inter({
@@ -29,6 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${manrope.variable} dark`}>
       <body className="bg-background text-text-primary font-sans antialiased">
+        <BackgroundGradient />
         {children}
       </body>
     </html>

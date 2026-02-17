@@ -26,7 +26,7 @@ export function TechStack() {
     <AnimatedSection as="section" className="section-padding">
       <div className="prose-width">
         <p className="section-label mb-8">Tech Stack</p>
-        <div className="flex flex-wrap items-center gap-8">
+        <div className="section-card flex flex-wrap items-center gap-8">
           {displayTech.map((tech) => {
             const Icon = iconMap[tech.id]
             return (

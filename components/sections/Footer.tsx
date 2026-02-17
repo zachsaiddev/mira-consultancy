@@ -2,7 +2,7 @@ import { LinkedInIcon, GitHubIcon, EmailIcon } from '@/components/icons'
 
 export function Footer() {
   return (
-    <footer className="border-t border-text-tertiary/10 py-8">
+    <footer className="border-t border-accent/15 py-8">
       <div className="prose-width">
         {/* Row 1: Copyright and location */}
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 mb-6 text-sm text-text-tertiary">

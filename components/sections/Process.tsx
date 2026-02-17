@@ -7,7 +7,7 @@ export function Process() {
       <div className="prose-width">
         <p className="section-label mb-4">How I Work</p>
         <h2 className="mb-12">Process</h2>
-        <div className="divide-y divide-text-tertiary/20">
+        <div className="section-card divide-y divide-accent/10">
           {processSteps.map((step) => (
             <div key={step.id} className="py-8 first:pt-0 last:pb-0 group cursor-default">
               <p className="section-label mb-2">
