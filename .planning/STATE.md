@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-16)
 
 **Core value:** The site must look premium and load fast — a single-page experience that communicates credibility, showcases services clearly, and drives visitors to book a call.
-**Current focus:** Core Content Sections — Phase 3 Complete
+**Current focus:** Visual Polish & Styling — Phase 03.1 In Progress
 
 ## Current Position
 
-Phase: 3 of 5 (Core Content Sections) — COMPLETE
-Plan: 3 of 3 in current phase
-Status: Complete
-Last activity: 2026-02-17 — Completed 03-03-PLAN.md
+Phase: 03.1 of 5 (Visual Polish & Styling) — In Progress
+Plan: 1 of N in current phase
+Status: In Progress
+Last activity: 2026-02-17 — Completed 03.1-01-PLAN.md
 
 Progress: [██████░░░░] 60%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 6
-- Average duration: 6.0 min
-- Total execution time: 0.59 hours
+- Total plans completed: 7
+- Average duration: 5.3 min
+- Total execution time: 0.61 hours
 
 **By Phase:**
 
@@ -30,9 +30,10 @@ Progress: [██████░░░░] 60%
 | 01 | 2 | 11 min | 5.5 min |
 | 02 | 1 | 14 min | 14 min |
 | 03 | 3 | 12 min | 4.0 min |
+| 03.1 | 1 | 1 min | 1.0 min |
 
 **Recent Trend:**
-- Last 5 plans: 02-01 (14min), 03-01 (1min), 03-02 (6min), 03-03 (5min)
+- Last 5 plans: 02-01 (14min), 03-01 (1min), 03-02 (6min), 03-03 (5min), 03.1-01 (1min)
 - Trend: Steady
 
 *Updated after each plan completion*
@@ -55,6 +56,9 @@ Recent decisions affecting current work:
 - triggerOnce: true for scroll animations: Sections stay visible after first scroll (02-01)
 - Hero/Intro no-divider: Intro flows as visual continuation of hero, no hr between them (03-03)
 - Footer owns its own top border: no external hr before Footer (03-03)
+- Accent color #7a9eb8 muted steel blue: WCAG AA ~5.5:1, visually distinct from previous warm white (03.1-01)
+- Film grain via SVG feTurbulence data-URI at opacity 0.035: static, fixed position, z-index -1 (03.1-01)
+- h1 override after shared heading block: CSS cascade sets 5xl size and editorial tracking without duplicating shared rules (03.1-01)
 
 ### Pending Todos
 
@@ -71,5 +75,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-17
-Stopped at: Completed 03-03-PLAN.md (Core Content Sections — Phase 3 Complete)
-Resume file: .planning/phases/03-core-content-sections/03-03-SUMMARY.md
+Stopped at: Completed 03.1-01-PLAN.md (Visual Polish — design system foundations)
+Resume file: .planning/phases/03.1-visual-polish-styling/03.1-01-SUMMARY.md
