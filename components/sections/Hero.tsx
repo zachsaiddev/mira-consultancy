@@ -12,13 +12,13 @@ export function Hero() {
       <div className="prose-width">
         <Image
           src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/images/logo.webp`}
-          alt="Mira Consultancy"
+          alt="Build with Mira"
           width={48}
           height={32}
           className="mb-6"
           unoptimized
         />
-        <p className="section-label mb-8">Mira Consultancy</p>
+        <p className="section-label mb-8">Build with Mira</p>
         <h1 ref={headlineRef} className="mb-6 font-bold">
           I build the tools your business actually needs.
         </h1>

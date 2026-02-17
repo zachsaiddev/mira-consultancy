@@ -6,7 +6,7 @@ export function Footer() {
       <div className="prose-width">
         {/* Row 1: Copyright and location */}
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 mb-6 text-[0.65rem] text-text-tertiary">
-          <p>&copy; 2026 Mira Consultancy</p>
+          <p>&copy; 2026 Build with Mira</p>
           <p>London, UK</p>
         </div>
 
