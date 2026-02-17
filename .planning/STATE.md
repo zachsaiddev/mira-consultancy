@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-16)
 
 **Core value:** The site must look premium and load fast — a single-page experience that communicates credibility, showcases services clearly, and drives visitors to book a call.
-**Current focus:** Visual Polish & Styling — Phase 03.1 In Progress
+**Current focus:** Polish & Performance — Phase 04 In Progress
 
 ## Current Position
 
-Phase: 03.1 of 5 (Visual Polish & Styling) — In Progress
-Plan: 3 of N in current phase
-Status: In Progress (awaiting checkpoint:human-verify for 03.1-03)
-Last activity: 2026-02-17 — Task 1 of 03.1-03-PLAN.md complete, at visual verification checkpoint
+Phase: 04 of 5 (Polish & Performance) — In Progress
+Plan: 2 of N in current phase (04-02 complete)
+Status: In Progress
+Last activity: 2026-02-17 — 04-02-PLAN.md complete (mobile GPU performance + accessibility)
 
-Progress: [██████░░░░] 60%
+Progress: [███████░░░] 70%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 8
-- Average duration: 5.3 min
-- Total execution time: 0.61 hours
+- Total plans completed: 10
+- Average duration: 4.7 min
+- Total execution time: 0.67 hours
 
 **By Phase:**
 
@@ -31,9 +31,10 @@ Progress: [██████░░░░] 60%
 | 02 | 1 | 14 min | 14 min |
 | 03 | 3 | 12 min | 4.0 min |
 | 03.1 | 2 | 2 min | 1.0 min |
+| 04 | 2 | 3 min | 1.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 03-01 (1min), 03-02 (6min), 03-03 (5min), 03.1-01 (1min), 03.1-02 (1min)
+- Last 5 plans: 03-03 (5min), 03.1-01 (1min), 03.1-02 (1min), 04-01 (1min), 04-02 (2min)
 - Trend: Steady
 
 *Updated after each plan completion*
@@ -64,6 +65,10 @@ Recent decisions affecting current work:
 - Heading stays unchanged on hover, only description brightens: Restrained hover effect per locked design decision (03.1-02)
 - useParallax speed 0.06 on Hero h1: subtle depth without layout shift, rAF-batched, passive listener (03.1-03)
 - prefers-reduced-motion guard on all motion hooks: accessibility requirement, hook returns immediately if set (03.1-03)
+- usePrefersReducedMotion defaults false SSR-safe: animations enabled on server, corrected on mount (04-02)
+- blur(70px) on gradient orbs: quadratic cost reduction vs 100px, visually equivalent at 50-60vw scale (04-02)
+- AnimatedSection early-return for reduced-motion: prevents opacity-0 flash entirely, hooks still called unconditionally (04-02)
+- TechStack role=img + aria-label on wrapper, aria-hidden on inner SVG: correct ARIA pattern avoiding duplicate announcements (04-02)
 
 ### Pending Todos
 
@@ -80,5 +85,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-17
-Stopped at: checkpoint:human-verify in 03.1-03-PLAN.md (Task 2 — complete visual polish verification)
-Resume file: .planning/phases/03.1-visual-polish-styling/03.1-03-SUMMARY.md
+Stopped at: Completed 04-02-PLAN.md (mobile GPU performance + accessibility — all tasks complete)
+Resume file: .planning/phases/04-polish-performance/04-02-SUMMARY.md
