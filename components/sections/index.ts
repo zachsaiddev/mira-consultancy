@@ -6,4 +6,5 @@ export { Contact } from './Contact';
 export { About } from './About';
 export { Differentiators } from './Differentiators';
 export { CaseStudies } from './CaseStudies';
+export { ToolsGrid } from './ToolsGrid';
 export { Footer } from './Footer';

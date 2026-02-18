@@ -6,6 +6,7 @@ import {
   Process,
   CaseStudies,
   About,
+  ToolsGrid,
   Contact,
   Footer,
 } from '@/components/sections'
@@ -45,6 +46,9 @@ export default function Home() {
 
       <hr className="border-t border-accent/15" />
       <About label={about.label} headline={about.headline} paragraphs={about.paragraphs} />
+
+      <hr className="border-t border-accent/15" />
+      <ToolsGrid />
 
       <hr className="border-t border-accent/15" />
       <Contact

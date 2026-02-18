@@ -4,6 +4,7 @@ import {
   Intro,
   Services,
   Process,
+  ToolsGrid,
   Contact,
   Footer,
 } from '@/components/sections'
@@ -43,6 +44,9 @@ export default function BuildPage() {
         introParagraph={process.introParagraph}
         steps={process.steps}
       />
+
+      <hr className="border-t border-accent/15" />
+      <ToolsGrid />
 
       <hr className="border-t border-accent/15" />
       <Contact
