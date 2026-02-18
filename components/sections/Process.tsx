@@ -1,4 +1,4 @@
-import { processSteps } from '@/lib/data/process';
+import type { ProcessStep } from '@/lib/schemas/content';
 import { AnimatedSection } from '@/components/ui';
 import {
   SearchIcon,
@@ -14,20 +14,26 @@ const processIcons: Record<string, React.FC<{ className?: string }>> = {
   shield: ShieldIcon,
 };
 
-export function Process() {
+interface ProcessProps {
+  label: string;
+  headline: string;
+  introParagraph?: string;
+  steps: ProcessStep[];
+}
+
+export function Process({ label, headline, introParagraph, steps }: ProcessProps) {
   return (
     <AnimatedSection as="section" stagger className="section-padding">
       <div className="prose-width">
-        <p className="section-label mb-4">How I Work</p>
-        <h2 className="mb-6">One person, start to finish</h2>
-        <p className="text-text-secondary mb-12 max-w-[38rem]">
-          I don&apos;t design something and hand you a PDF. I don&apos;t build
-          something and disappear. One person owns the problem from discovery
-          through to delivery — fewer misunderstandings, faster decisions, and a
-          result that actually matches what you asked for.
-        </p>
-        <div className="section-card divide-y divide-accent/10">
-          {processSteps.map((step) => {
+        <p className="section-label mb-4">{label}</p>
+        <h2 className="mb-6">{headline}</h2>
+        {introParagraph && (
+          <p className="text-text-secondary mb-12 max-w-[38rem]">
+            {introParagraph}
+          </p>
+        )}
+        <div className={`section-card divide-y divide-accent/10${!introParagraph ? ' mt-6' : ''}`}>
+          {steps.map((step) => {
             const Icon = step.icon ? processIcons[step.icon] : null;
             return (
               <div key={step.id} className="py-8 first:pt-0 last:pb-0 group cursor-default">

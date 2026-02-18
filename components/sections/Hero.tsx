@@ -8,7 +8,14 @@ import { useParallax } from '@/lib/hooks/useParallax';
 
 const CALENDLY_URL = 'https://calendly.com/buildwithmira/discovery';
 
-export function Hero() {
+interface HeroProps {
+  headline: string;
+  subheadline: string;
+  ctaText: string;
+  showLogo?: boolean;
+}
+
+export function Hero({ headline, subheadline, ctaText, showLogo = true }: HeroProps) {
   const headlineRef = useParallax<HTMLHeadingElement>(0.06);
   const [showCalendly, setShowCalendly] = useState(false);
 
@@ -16,25 +23,26 @@ export function Hero() {
     <>
       <AnimatedSection as="section" className="min-h-[70vh] flex items-center section-padding">
         <div className="prose-width">
-          <Image
-            src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/images/logo.webp`}
-            alt="Build with Mira"
-            width={48}
-            height={32}
-            className="mb-6"
-            unoptimized
-          />
+          {showLogo && (
+            <Image
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/images/logo.webp`}
+              alt="Build with Mira"
+              width={48}
+              height={32}
+              className="mb-6"
+              unoptimized
+            />
+          )}
           <p className="section-label mb-8">Build with Mira</p>
           <h1 ref={headlineRef} className="mb-6 font-bold">
-            I build the tools your business actually needs.
+            {headline}
           </h1>
           <p className="text-lg text-text-secondary max-w-[38rem] mb-8">
-            Solutions architecture, platform development, and implementation
-            consulting for businesses that have outgrown their spreadsheets.
+            {subheadline}
           </p>
           <span onMouseEnter={() => prefetchCalendly(CALENDLY_URL)}>
             <Button onClick={() => setShowCalendly(true)}>
-              Let&apos;s talk
+              {ctaText}
             </Button>
           </span>
         </div>

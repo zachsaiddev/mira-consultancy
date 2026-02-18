@@ -10,14 +10,14 @@ export const serviceSchema = z.object({
 
 export type Service = z.infer<typeof serviceSchema>
 
-// TechStackItem schema for the tech stack display
-export const techStackItemSchema = z.object({
+// Differentiator schema for the "What Makes This Different" section
+export const differentiatorSchema = z.object({
   id: z.string().min(1),
-  name: z.string().min(1),
-  category: z.enum(['frontend', 'backend', 'infrastructure', 'automation']),
+  title: z.string().min(1),
+  description: z.string().min(10),
 })
 
-export type TechStackItem = z.infer<typeof techStackItemSchema>
+export type Differentiator = z.infer<typeof differentiatorSchema>
 
 // ProcessStep schema for the 4 "How I Work" steps
 export const processStepSchema = z.object({

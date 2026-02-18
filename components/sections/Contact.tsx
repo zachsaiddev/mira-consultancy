@@ -6,28 +6,35 @@ import { prefetchCalendly } from '@/components/ui/CalendlyModal';
 
 const CALENDLY_URL = 'https://calendly.com/buildwithmira/discovery';
 
-export function Contact() {
+interface ContactProps {
+  label: string;
+  headline: string;
+  description: string;
+  primaryCtaText: string;
+  emailAddress: string;
+}
+
+export function Contact({ label, headline, description, primaryCtaText, emailAddress }: ContactProps) {
   const [showCalendly, setShowCalendly] = useState(false);
 
   return (
     <>
       <AnimatedSection as="section" stagger className="section-padding">
         <div className="prose-width">
-          <p className="section-label mb-4">Get in Touch</p>
-          <h2 className="mb-6">Got something that needs fixing?</h2>
+          <p className="section-label mb-4">{label}</p>
+          <h2 className="mb-6">{headline}</h2>
           <div className="section-card">
             <p className="text-lg text-text-secondary mb-8 max-w-[38rem]">
-              Tell me what&apos;s not working. No sales pitch, no commitment — just
-              a straight conversation about whether I can help.
+              {description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <span onMouseEnter={() => prefetchCalendly(CALENDLY_URL)}>
                 <Button onClick={() => setShowCalendly(true)}>
-                  Get in touch
+                  {primaryCtaText}
                 </Button>
               </span>
-              <Button href="mailto:hello@buildwithmira.co.uk" variant="secondary">
-                hello@buildwithmira.co.uk
+              <Button href={`mailto:${emailAddress}`} variant="secondary">
+                {emailAddress}
               </Button>
             </div>
           </div>
