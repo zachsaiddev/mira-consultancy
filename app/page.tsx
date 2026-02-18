@@ -4,8 +4,8 @@ import {
   Differentiators,
   Services,
   Process,
-  About,
   CaseStudies,
+  About,
   Contact,
   Footer,
 } from '@/components/sections'
@@ -15,6 +15,7 @@ import {
   differentiators,
   services,
   process,
+  caseStudies,
   about,
   contact,
 } from '@/lib/data/pages/home'
@@ -35,10 +36,15 @@ export default function Home() {
       <Process label={process.label} headline={process.headline} steps={process.steps} />
 
       <hr className="border-t border-accent/15" />
-      <About label={about.label} headline={about.headline} paragraphs={about.paragraphs} />
+      <CaseStudies
+        label={caseStudies.label}
+        headline={caseStudies.headline}
+        studies={caseStudies.studies}
+        proBono={caseStudies.proBono}
+      />
 
       <hr className="border-t border-accent/15" />
-      <CaseStudies />
+      <About label={about.label} headline={about.headline} paragraphs={about.paragraphs} />
 
       <hr className="border-t border-accent/15" />
       <Contact

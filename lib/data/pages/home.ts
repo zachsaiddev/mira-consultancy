@@ -173,6 +173,75 @@ export const about = {
   ],
 }
 
+// — Case Studies —
+
+export interface CaseStudy {
+  id: string
+  title: string
+  context: string
+  paragraphs: string[]
+  metric: string | string[]
+}
+
+export interface ProBonoItem {
+  name: string
+  description: string
+  url?: string
+}
+
+export const caseStudies = {
+  label: 'The Work',
+  headline: 'The Work',
+  studies: [
+    {
+      id: 'finance-platform',
+      title: 'Finance Platform',
+      context: '130-person agency',
+      paragraphs: [
+        'Finance was running on a mess of Google Sheets, manual CSVs, pivot tables, and scripts. Deals, work orders, commissions, team revenue \u2014 all in different spreadsheets, no naming conventions, no permissions, no single source of truth. Nobody fully trusted the numbers and pulling a report took hours.',
+        'I mapped out how the finance team and leadership actually worked \u2014 what decisions they needed to make, what numbers they needed to see, where things kept breaking. Then I built a unified system in Airtable for team revenue allocation, deal tracking, and projections across clients. C-suite and finance adopted it immediately and use it daily.',
+        'Now rebuilding the whole thing as a full-stack platform in TypeScript, React, and Supabase. Proper auth, automated reporting, every employee gets access.',
+      ],
+      metric: ['\u00A33,000/month \u2192 \u00A350/month', 'Hours of manual reporting every week \u2192 zero'],
+    },
+    {
+      id: 'iso-27001',
+      title: 'ISO 27001 Certification',
+      context: '130-person agency',
+      paragraphs: [
+        'No security framework, no data governance, no certification. Brief was simple: get ISO 27001 within a year, starting from nothing.',
+        'Built the ISMS from scratch. Policies, access controls, risk assessments, compliance monitoring. Led data audits across the business, figured out where sensitive data actually lived versus where people thought it lived, and redesigned how it was handled.',
+      ],
+      metric: 'Certified within 12 months',
+    },
+    {
+      id: 'it-operations',
+      title: 'IT Operations',
+      context: '130-person agency',
+      paragraphs: [
+        'When I joined there was no IT function. No asset tracking, no device management, no onboarding process, no software licence visibility. 130 people, zero oversight of the technology estate.',
+        'Built the whole thing \u2014 asset management, software licensing, people management, request workflows, Wi-Fi diagnostics, onboarding and offboarding automation. All in Airtable with n8n handling the automation. Currently rebuilding it as a self-hosted full-stack system to cut the platform costs.',
+      ],
+      metric: '130 people, zero IT \u2192 fully managed estate',
+    },
+  ] satisfies CaseStudy[],
+  proBono: [
+    {
+      name: 'It\u2019s a Penalty',
+      description: 'International non-profit tackling exploitation and human trafficking. Redesigned and rebuilt their website as a custom WordPress/PHP build. Ongoing ad-hoc IT and infrastructure support.',
+      url: 'https://itsapenalty.org',
+    },
+    {
+      name: 'Safe to Compete',
+      description: 'A safeguarding initiative from NCMEC and It\u2019s a Penalty. Built the campaign website in Webflow.',
+    },
+    {
+      name: 'The Spitz',
+      description: 'London charitable trust. Redesigned their website, provide ongoing IT and security support. Currently a trustee.',
+    },
+  ] satisfies ProBonoItem[],
+}
+
 // — Contact —
 
 export const contact = {
