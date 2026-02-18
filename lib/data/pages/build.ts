@@ -123,20 +123,6 @@ export const process = {
   steps: processData.map((p) => processStepSchema.parse(p)),
 }
 
-// — Tech List —
-
-export const technologies = [
-  'TypeScript',
-  'React',
-  'Supabase',
-  'PostgreSQL',
-  'n8n',
-  'Google Workspace',
-  'HubSpot',
-  'Airtable',
-  'REST APIs',
-]
-
 // — Contact —
 
 export const contact = {

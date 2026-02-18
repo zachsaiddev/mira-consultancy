@@ -167,8 +167,6 @@ export const about = {
   paragraphs: [
     'Mira Consultancy is led by Zach \u2014 a solutions architect and implementation consultant based in London.',
     'I spent seven years at Apple, and that\u2019s where the foundation was set. Not the technical stuff \u2014 the human stuff. Understanding why people resist things, how to explain complex ideas simply, and why the best technology is the kind that disappears into the background.',
-    'Since then I\u2019ve been the sole technology lead for a growing agency \u2014 building finance platforms, leading data governance programmes, delivering ISO 27001, and designing the IT operations infrastructure that 130 people rely on every day. In every one of those projects, the technology was the straightforward part. Getting people to trust it, use it, and make it theirs \u2014 that was the real work.',
-    'I also work pro bono with non-profits including It\u2019s a Penalty and NCMEC, helping with digital transformation and technology strategy.',
     'When I\u2019m not connecting people with technology, I\u2019m playing live music across London. Different stage, same energy.',
   ],
 }

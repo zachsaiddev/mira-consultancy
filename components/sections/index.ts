@@ -6,5 +6,4 @@ export { Contact } from './Contact';
 export { About } from './About';
 export { Differentiators } from './Differentiators';
 export { CaseStudies } from './CaseStudies';
-export { TechList } from './TechList';
 export { Footer } from './Footer';
