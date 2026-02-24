@@ -1,5 +1,3 @@
-'use client'
-
 import { AnimatedSection } from '@/components/ui'
 import Image from 'next/image'
 

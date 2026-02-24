@@ -25,7 +25,7 @@ export function Button({
   ...rest
 }: ButtonProps) {
   const classes = cn(
-    'inline-flex items-center gap-2 font-medium px-6 py-3 transition-all cursor-pointer',
+    'group inline-flex items-center gap-2 font-medium px-6 py-3 transition-all cursor-pointer',
     variant === 'primary' &&
       'bg-accent text-background hover:bg-accent/85 active:bg-accent/75',
     variant === 'secondary' &&

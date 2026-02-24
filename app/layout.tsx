@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter, Manrope } from 'next/font/google'
-import { BackgroundGradient } from '@/components/ui'
-import { ToolsColumn } from '@/components/ui/ToolsColumn'
+import { BackgroundGradient, ToolsColumn } from '@/components/ui'
 import './globals.css'
 
 const inter = Inter({
