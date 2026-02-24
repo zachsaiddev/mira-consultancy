@@ -12,7 +12,7 @@ See: .planning/PROJECT.md (updated 2026-02-16)
 Phase: 04 of 5 (Polish & Performance) — In Progress (awaiting human checkpoint)
 Plan: 3 of 3 in current phase (04-03 Task 1 complete, Task 2 checkpoint pending)
 Status: Checkpoint — awaiting human verify (mobile device + OG preview)
-Last activity: 2026-02-17 — 04-03-PLAN.md Task 1 complete (Lighthouse 98, deploy verified)
+Last activity: 2026-02-24 - Completed quick task 1: Fix all tech debt from v1.0 audit
 
 Progress: [████████░░] 80%
 
@@ -87,6 +87,12 @@ None yet.
 ### Blockers/Concerns
 
 None yet.
+
+### Quick Tasks Completed
+
+| # | Description | Date | Commit | Directory |
+|---|-------------|------|--------|-----------|
+| 1 | Fix all tech debt from v1.0 audit: Button arrow bug, dead tech icon components, ToolsColumn barrel, About.tsx use client, CaseStudy/ProBonoItem Zod schemas | 2026-02-24 | bc08e28 | [1-fix-all-tech-debt-from-v1-0-audit-button](./quick/1-fix-all-tech-debt-from-v1-0-audit-button/) |
 
 ## Session Continuity
 
