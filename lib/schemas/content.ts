@@ -29,3 +29,23 @@ export const processStepSchema = z.object({
 })
 
 export type ProcessStep = z.infer<typeof processStepSchema>
+
+// CaseStudy schema
+export const caseStudySchema = z.object({
+  id: z.string().min(1),
+  title: z.string().min(1),
+  context: z.string().min(1),
+  paragraphs: z.array(z.string().min(1)).min(1),
+  metric: z.union([z.string().min(1), z.array(z.string().min(1)).min(1)]),
+})
+
+export type CaseStudy = z.infer<typeof caseStudySchema>
+
+// ProBonoItem schema
+export const proBonoItemSchema = z.object({
+  name: z.string().min(1),
+  description: z.string().min(1),
+  url: z.string().url().optional(),
+})
+
+export type ProBonoItem = z.infer<typeof proBonoItemSchema>

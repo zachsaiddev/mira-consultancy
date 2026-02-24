@@ -1,4 +1,4 @@
-import type { CaseStudy, ProBonoItem } from '@/lib/data/pages/home';
+import type { CaseStudy, ProBonoItem } from '@/lib/schemas/content';
 import { AnimatedSection } from '@/components/ui';
 
 interface CaseStudiesProps {
